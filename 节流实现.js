@@ -1,12 +1,12 @@
 //规定时间内只触发一次
-function throttle (fn){
-    var canRun = true;
+const throttle = (fn) => {
+    let canRun = false;
     return function(){
         canRun = false;
         if(!canRun) return ;
-        setTimeout(function(){
+        setTimeout(()=>{
             fn.apply(this,arguments);
-            canRun = true;
-        },1000)
+            canRun = false;
+        },3000)
     }
 }

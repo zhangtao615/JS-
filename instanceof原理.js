@@ -1,14 +1,14 @@
 // 思路：右边变量的原型存在于左边变量的原型链上
-function Instanceof(){
-    let leftValue = left.__proto__;
-    let rightValue = right.prototype;
+let InstanceOf =  (leftValue,rightValue) => {
+    let rightPro = rightValue.prototype;
+    leftvalue = leftValue.__proto__;
     while(true){
         if(leftValue === null){
             return false;
         }
-        if(leftValue === rightValue){
+        if(rightPro === leftValue){
             return true;
         }
-        leftValue = leftValue.__proto__;
+        leftvalue = leftValue.__proto__;
     }
 }

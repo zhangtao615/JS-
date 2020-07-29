@@ -10,7 +10,7 @@ Object.defineProperty(obj,'text',{
         console.log('获取数据')
     },
     set(newVal){
-        console.log('数据更新')；
+        console.log('数据更新')
         input.value = newVal;
         span.innerHTML = newVal;
     }

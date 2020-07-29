@@ -1,4 +1,4 @@
-const New = (fn) => {
+const createNew = (fn) => {
     return () => {
         //创建一个新对象且将其隐式原型指向构造函数原型
         let obj = {

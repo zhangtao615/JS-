@@ -1,9 +1,9 @@
 //规定时间内未触发第二次就执行
 const debounce = (fn) => {
-    let timeout = null;
+    let timer = null;
     return () => {
-        clearTimeout(timeout);
-        timeout = setTimeout(()=>{
+        clearTimeout(timer);
+        timer = setTimeout(()=>{
             fn.apply(this,arguments);
         },1000)
     }

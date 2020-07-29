@@ -9,7 +9,7 @@ const ajax = () => {
   let xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHttp");
   xhr.open('get/post',url,true);
   xhr.send(`数据`);
-  xhr.onREadyStateChange = () => {
+  xhr.onReadyStateChange = () => {
     if(xhr.readyState == 4 && xhr.status == 200){
       //
     }
